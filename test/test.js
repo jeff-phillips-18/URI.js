@@ -1684,6 +1684,7 @@
   test('ensureValidPort', function() {
 
     function testPort(value) {
+      console.log("Testing: " + value);
       var result = true;
       try {
         URI.ensureValidPort(value);
@@ -1691,6 +1692,7 @@
         result = false;
       }
 
+      console.log("Testing: " + value + "  ===> " + result);
       return result;
     }
 
