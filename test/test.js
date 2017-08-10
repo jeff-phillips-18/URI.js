@@ -1697,7 +1697,7 @@
     equal(testPort(8000), true);
     equal(testPort('8080'), true);
 
-    equal(testPort(0), false);
+    equal(testPort(0), true);
     equal(testPort(1), true);
 
     equal(testPort(65535), true);

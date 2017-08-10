@@ -1063,7 +1063,7 @@
 
     var port = Number(v);
     if (isInteger(port) && (port > 0) && (port < 65536)) {
-      return true;
+      return;
     }
 
     throw new TypeError('Port "' + v + '" is not a valid port');
