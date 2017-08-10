@@ -77,6 +77,10 @@
     return this;
   }
 
+  function isInteger(value) {
+    return /^[0-9]+$/.test(value);
+  }
+
   URI.version = '1.18.11';
 
   var p = URI.prototype;
@@ -1058,8 +1062,8 @@
     }
 
     var port = Number(v);
-    if (Number.isInteger(port) && (port > 0) && (port < 65536)) {
-      return;
+    if (isInteger(port) && (port > 0) && (port < 65536)) {
+      return true;
     }
 
     throw new TypeError('Port "' + v + '" is not a valid port');
